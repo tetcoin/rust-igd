@@ -1,4 +1,4 @@
-## Internet Gateway Device client
+## Tetsy Internet Gateway Device client
 
 This is a simple library that communicates with an UPNP enabled gateway device (a router). Contributions and feedback are welcome.
 At the moment, you can search for the gateway, request the gateway's external address and, add/remove port mappings. See the `examples/` folder for a demo.
