@@ -1,9 +1,9 @@
 use std::net::{SocketAddrV4, Ipv4Addr};
 
-extern crate igd;
+extern crate ig;
 
 fn main() {
-    match igd::search_gateway() {
+    match ig::search_gateway() {
         Err(ref err) => println!("Error: {}", err),
         Ok(gateway) => {
             let local_addr = match std::env::args().nth(1) {
@@ -13,7 +13,7 @@ fn main() {
             let local_addr = local_addr.parse::<Ipv4Addr>().unwrap();
             let local_addr = SocketAddrV4::new(local_addr, 8080u16);
 
-            match gateway.add_any_port(igd::PortMappingProtocol::TCP,
+            match gateway.add_any_port(ig::PortMappingProtocol::TCP,
                                        local_addr, 60, "add_port example") {
                 Err(ref err) => {
                     println!("There was an error! {}", err);

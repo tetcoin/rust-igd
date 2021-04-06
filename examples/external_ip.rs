@@ -1,7 +1,7 @@
-extern crate igd;
+extern crate ig;
 
 fn main() {
-    match igd::search_gateway() {
+    match ig::search_gateway() {
         Err(ref err) => println!("Error: {}", err),
         Ok(gateway) => {
             match gateway.get_external_ip() {

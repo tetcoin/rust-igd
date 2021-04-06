@@ -5,7 +5,7 @@ At the moment, you can search for the gateway, request the gateway's external ad
 
 Contributions are welcome! This is pretty delicate to test, please submit an issue if you have trouble using this.
 
-[Documentation](https://sbstp.github.io/rust-igd/igd/)
+[Documentation](https://tetcoin.github.io/tetsy-rust-igd/igd/)
 
 ## License
 MIT

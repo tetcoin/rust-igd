@@ -1,7 +1,7 @@
 #!/bin/bash
 # Simple script to push the docs.
 
-REPO="git@github.com:SBSTP/rust-igd.git"
+REPO="git@github.com:tetcoin/tetsy-rust-igd.git"
 TMPDIR="/tmp/rust-docs-$$"
 
 echo "REPO: $REPO"

@@ -1,12 +1,12 @@
 use std::net::SocketAddrV4;
 use std::env;
 
-extern crate igd;
+extern crate ig;
 
 fn main() {
-    match igd::search_gateway() {
+    match ig::search_gateway() {
         Err(ref err) => match *err {
-            igd::SearchError::IoError(ref ioe) => println!("IoError: {}", ioe),
+            ig::SearchError::IoError(ref ioe) => println!("IoError: {}", ioe),
             _ => println!("{:?}", err),
         },
         Ok(gateway) => {
@@ -21,12 +21,12 @@ fn main() {
 
             let local_addr = SocketAddrV4::new(local_ip, local_port);
 
-            match gateway.add_port(igd::PortMappingProtocol::TCP, remote_port,
+            match gateway.add_port(ig::PortMappingProtocol::TCP, remote_port,
                                 local_addr, 60, "crust") {
                 Err(ref err) => println!("{:?}", err),
                 Ok(()) => {
                     println!("AddPortMapping successful.");
-                    match gateway.remove_port(igd::PortMappingProtocol::TCP, remote_port) {
+                    match gateway.remove_port(ig::PortMappingProtocol::TCP, remote_port) {
                         Err(ref err) => println!("Error removing: {:?}", err),
                         Ok(_) => println!("DeletePortMapping successful."),
                     }

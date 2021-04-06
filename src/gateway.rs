@@ -415,7 +415,7 @@ impl Gateway {
                         lease_duration: u32, description: &str)
             -> Result<u16, AddAnyPortError>
     {
-        // This function first attempts to call AddAnyPortMapping on the IGD with a random port
+        // This function first attempts to call AddAnyPortMapping on the IG with a random port
         // number. If that fails due to the method being unknown it attempts to call AddPortMapping
         // instead with a random port number. If that fails due to ConflictInMappingEntry it retrys
         // with another port up to a maximum of 20 times. If it fails due to SamePortValuesRequired

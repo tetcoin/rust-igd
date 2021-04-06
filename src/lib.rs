@@ -1,4 +1,4 @@
-//! This library allows you to communicate with an IGD enabled device.
+//! This library allows you to communicate with an IG enabled device.
 //! Use one of the `search_gateway` functions to obtain a `Gateway` object.
 //! You can then communicate with the device via this object.
 

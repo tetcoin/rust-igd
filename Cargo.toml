@@ -1,13 +1,13 @@
 [package]
-name = "igd"
+name = "ig"
 version = "0.4.2"
 authors = ["Simon Bernier St-Pierre <sbernierstpierre@gmail.com>"]
-description = "Internet Gateway Protocol client"
-homepage = "https://github.com/SBSTP/rust-igd"
-repository = "https://github.com/SBSTP/rust-igd"
-documentation = "https://sbstp.github.io/rust-igd/igd/"
+description = "Tetsy Internet Gateway Protocol client"
+homepage = "https://core.tetcoin.org"
+repository = "https://github.com/tetcoin/tetsy-rust-igd"
+documentation = "https://tetcoin.github.io/tetsy-rust-igd/igd/"
 readme = "README.md"
-keywords = ["igd", "upnp"]
+keywords = ["ig", "upnp"]
 license = "MIT"
 
 [dependencies]
